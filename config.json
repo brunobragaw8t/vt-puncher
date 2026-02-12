@@ -1,0 +1,10 @@
+{
+  "timezone": "Europe/Lisbon",
+  "punches": [
+    { "time": "07:00", "type": "in" },
+    { "time": "12:00", "type": "out" },
+    { "time": "13:00", "type": "in" },
+    { "time": "16:00", "type": "out" }
+  ],
+  "workdays": [1, 2, 3, 4, 5]
+}
