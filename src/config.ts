@@ -11,22 +11,23 @@ export function getCredentials(): Credentials {
   const user = process.env.VT_USER;
   const password = process.env.VT_PASSWORD;
   const companyId = process.env.VT_COMPANY_ID;
-  const authKey = process.env.VT_AUTH_KEY;
 
-  if (!user || !password || !companyId || !authKey) {
+  if (!user || !password || !companyId) {
     throw new Error(
-      "Missing VT_USER, VT_PASSWORD, VT_COMPANY_ID, or VT_AUTH_KEY in environment"
+      "Missing VT_USER, VT_PASSWORD, or VT_COMPANY_ID in environment"
     );
   }
 
-  return { user, password, companyId, authKey };
+  return { user, password, companyId };
 }
 
 export async function getConfig(): Promise<Config> {
   const configFile = file(CONFIG_PATH);
 
   if (!(await configFile.exists())) {
-    throw new Error(`Config file not found: ${CONFIG_PATH}`);
+    throw new Error(
+      `Config file not found: ${CONFIG_PATH}\nCopy config.example.json to config.json and edit it.`
+    );
   }
 
   return configFile.json();

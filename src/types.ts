@@ -38,13 +38,11 @@ export interface ScheduledPunch {
 export interface Config {
   timezone: string;
   punches: ScheduledPunch[];
-  workdays: number[]; // 1=Monday, 7=Sunday
 }
 
 // State Types
 
 export interface State {
-  schedulerPid?: number;
   lastPunch?: {
     type: "in" | "out";
     timestamp: string;
@@ -57,5 +55,4 @@ export interface Credentials {
   user: string;
   password: string;
   companyId: string;
-  authKey: string;
 }

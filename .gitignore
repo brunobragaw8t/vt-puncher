@@ -35,3 +35,6 @@ report.[0-9]_.[0-9]_.[0-9]_.[0-9]_.json
 
 # VT state
 state.json
+
+# VT config (user-specific)
+config.json

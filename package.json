@@ -1,14 +1,11 @@
 {
   "name": "vt",
-  "module": "src/index.ts",
   "type": "module",
   "private": true,
-  "bin": {
-    "vt": "./src/index.ts"
-  },
   "scripts": {
-    "start": "bun run src/index.ts",
-    "scheduler": "bun run src/scheduler.ts"
+    "in": "bun run src/punch.ts in",
+    "out": "bun run src/punch.ts out",
+    "start": "bun run src/scheduler.ts"
   },
   "devDependencies": {
     "@types/bun": "latest",
@@ -18,7 +15,6 @@
     "typescript": "^5"
   },
   "dependencies": {
-    "commander": "^14.0.2",
     "node-cron": "^4.2.1"
   }
 }
