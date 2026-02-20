@@ -1,5 +1,6 @@
 {
   "timezone": "Europe/Lisbon",
+  "jitter": 5,
   "punches": [
     { "time": "07:00", "type": "in" },
     { "time": "12:00", "type": "out" },

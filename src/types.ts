@@ -37,6 +37,7 @@ export interface ScheduledPunch {
 
 export interface Config {
   timezone: string;
+  jitter?: number; // max jitter in minutes (default: 5)
   punches: ScheduledPunch[];
 }
 
